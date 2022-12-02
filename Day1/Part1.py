@@ -1,6 +1,6 @@
-with open("./Day 1/input.txt",encoding="utf-8") as f:
+with open("./Day1/input.txt",encoding="utf-8") as f:
     buffer = list()
-    elves_list = list()
+    highest = 0
     for line in f.readlines():
         
         if line != "\n":
@@ -8,8 +8,8 @@ with open("./Day 1/input.txt",encoding="utf-8") as f:
         else:
             floatbuffer=[float(item.rstrip("\n")) for item in buffer]
             floatbuffer=sum(floatbuffer)
-            elves_list.append(floatbuffer)
-            buffer = list()
-    elves_list.sort(reverse=True)
-    print(sum(elves_list[:3]))
+            if highest<floatbuffer:
+                highest=floatbuffer
+            buffer=list()
+    print(highest)
 
