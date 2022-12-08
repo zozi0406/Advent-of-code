@@ -40,7 +40,6 @@ with open("./Day7/input.txt",encoding="utf-8") as f:
     space_left=70000000-dircounts["//"]
     
     space_req=30000000-space_left
-    print(space_req)
     sorted_dircounts={k: v for k, v in sorted(dircounts.items(), key=lambda item: item[1])}
     for key, item in sorted_dircounts.items():
         if item>=space_req:
