@@ -40,17 +40,11 @@ with open("./Day7/input.txt", encoding="utf-8") as f:
         reverse=False,
         key=lambda hand: (
             hand["type"],
-            card_values[hand["hand"][0]],
-            card_values[hand["hand"][1]],
-            card_values[hand["hand"][2]],
-            card_values[hand["hand"][3]],
-            card_values[hand["hand"][4]],
+            *[card_values[hand["hand"][i]] for i in range(5)],
         ),
     )
     result = 0
     for rank, hand in enumerate(hands):
-        if rank <= 200:
-            print(hand)
         result += hand["bid"] * (rank + 1)
-    print(card_values)
+
     print(result)
