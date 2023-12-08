@@ -91,9 +91,3 @@ with open("./Day8/input.txt", encoding="utf-8") as f:
         val -= 283
 
     print(val)
-
-    # for index, valdict in enumerate(period_lengths):
-    #     for index2, valdict2 in enumerate(period_lengths):
-    #         if index != index2:
-    #             print(f"GCD between {index} and {index2}: ")
-    #             print(math.gcd(valdict["period_length"], valdict2["period_length"]))
