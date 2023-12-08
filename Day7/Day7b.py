@@ -13,6 +13,7 @@ def find_type(hand):
         print(counts.most_common(2))
         new_hand = hand.replace("J", counts.most_common(2)[1][0])
         counts = Counter(list(new_hand))
+
     if counts.most_common(1)[0][1] == 5:
         return 7
     elif counts.most_common(1)[0][1] == 4:
